@@ -1,4 +1,17 @@
-<div class="input-group">
-    <input type="number" [(ngModel)]="value" class="form-control">
-    <button class="btn btn-secondary" (click)="addCount()">Add Count</button>
+<div class="card">
+    <div class="card-header">
+        <h2>{{this.channelName}}</h2>
+    </div>
+    <div class="card-body">
+        <div class="input-group">
+    
+            <input type="number" [(ngModel)]="value" class="form-control">
+            <button class="btn btn-secondary" (click)="addCount()">Add Count</button>
+        </div>
+        <div class="input-group">
+            <input type="text" [(ngModel)]="channelnameText" class="form-control">
+            <button class="btn btn-warning" (click)="changeChannelTitle()">Change Channel Text</button>
+        </div>
+    </div>
 </div>
+
