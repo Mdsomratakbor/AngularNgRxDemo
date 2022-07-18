@@ -18,6 +18,7 @@ export class CounterButtonsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /* Normal process */
   onIncrement(){
     this.increment.emit();
   }
@@ -27,6 +28,8 @@ export class CounterButtonsComponent implements OnInit {
   onReset(){
     this.reset.emit();
   }
+
+  /*  NgRx store */
   onIncrement1(){
     this.store.dispatch(increment())
   }
