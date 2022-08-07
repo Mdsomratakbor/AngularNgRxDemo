@@ -16,6 +16,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
 import { appReducer } from './counter/store/state/app.state';
 import { HighlightDirective } from './directives/highlight.directive';
+import { NgIfCustomeDirective } from './directives/ng-if-custome.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     HomeComponent,
     HeaderComponent,
     PostComponent,
-    HighlightDirective
+    HighlightDirective,
+    NgIfCustomeDirective
   ],
   imports: [
     BrowserModule,

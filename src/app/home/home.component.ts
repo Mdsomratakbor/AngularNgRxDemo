@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  isStatus:boolean= false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeStatus(){
+    this.isStatus = this.isStatus==false?true:false;
   }
 
 }
