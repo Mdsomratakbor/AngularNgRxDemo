@@ -4,6 +4,6 @@ export interface CounterState{
 }
 
 export const initalState:CounterState = {
-    counter: 4,
+    counter: 0,
     channelName: 'DE channel'
 }
