@@ -18,6 +18,7 @@ import { appReducer } from './counter/store/state/app.state';
 import { HighlightDirective } from './directives/highlight.directive';
 import { NgIfCustomeDirective } from './directives/ng-if-custome.directive';
 import { AddPostComponent } from './posts/add-post/add-post.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AddPostComponent } from './posts/add-post/add-post.component';
     PostComponent,
     HighlightDirective,
     NgIfCustomeDirective,
-    AddPostComponent
+    AddPostComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,
