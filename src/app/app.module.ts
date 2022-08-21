@@ -26,7 +26,7 @@ import { NgIfCustomeDirective } from './directives/ng-if-custome.directive';
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    StoreModule.forRoot(appReducer),
+    StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
       logOnly: environment.production,
     }),
