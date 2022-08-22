@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { State, Store } from '@ngrx/store';
-import { addPost, ADD_POST_ACTION } from 'src/app/counter/store/action/post.action';
-import { AppState } from 'src/app/counter/store/state/app.state';
+import {  Store } from '@ngrx/store';
+import { addPost } from 'src/app/store/action/post.action';
+import { AppState } from 'src/app/store/state/app.state';
 import { Post } from 'src/app/models/post.model';
 
 @Component({
@@ -27,7 +27,7 @@ this.postForm = new FormGroup({
     Validators.minLength(10)
   ])
 })
-  
+
   }
   onAddPost(){
     if(!this.postForm.valid)
@@ -38,7 +38,7 @@ this.postForm = new FormGroup({
         description: this.postForm.value.description
       }
       this.store.dispatch(addPost({post}));
-     
+
   }
 
 

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { deletePost } from 'src/app/counter/store/action/post.action';
-import { getPosts } from 'src/app/counter/store/selector/post.selector';
-import { AppState } from 'src/app/counter/store/state/app.state';
+import { deletePost } from 'src/app/store/action/post.action';
+import { getPosts } from 'src/app/store/selector/post.selector';
+import { AppState } from 'src/app/store/state/app.state';
 import { Post } from 'src/app/models/post.model';
 
 @Component({

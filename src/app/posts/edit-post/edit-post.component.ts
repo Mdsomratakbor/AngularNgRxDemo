@@ -3,9 +3,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
-import { updatePost } from 'src/app/counter/store/action/post.action';
-import { getPostById } from 'src/app/counter/store/selector/post.selector';
-import { AppState } from 'src/app/counter/store/state/app.state';
+import { updatePost } from 'src/app/store/action/post.action';
+import { getPostById } from 'src/app/store/selector/post.selector';
+import { AppState } from 'src/app/store/state/app.state';
 import { Post } from 'src/app/models/post.model';
 
 @Component({
@@ -18,10 +18,10 @@ post: Post;
   postForm: FormGroup;
   postSubscription: Subscription;
   constructor(
-    private route: ActivatedRoute, 
-    private store : Store<AppState>, 
+    private route: ActivatedRoute,
+    private store : Store<AppState>,
     private router: Router
-    ) { 
+    ) {
     this.postSubscription =  this.route.paramMap.subscribe((params)=>{
       const id = params.get('id');
      this.store.select(getPostById,{id}).subscribe((data)=>{
@@ -30,10 +30,10 @@ post: Post;
      })
     })
   }
- 
+
 
   ngOnInit(): void {
-   
+
   }
   ngOnDestroy(): void {
    if(this.postSubscription){

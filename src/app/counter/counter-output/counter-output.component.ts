@@ -1,8 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { getCounter } from '../store/selector/counter.selector';
-import { AppState } from '../store/state/app.state';
-import { CounterState } from '../store/state/counter.state';
+import { getCounter } from 'src/app/store/selector/counter.selector';
+import { AppState } from 'src/app/store/state/app.state';
 
 @Component({
   selector: 'app-counter-output',

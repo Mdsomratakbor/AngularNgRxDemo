@@ -1,4 +1,4 @@
-import { COUNTER_SELECTOR_NAME } from './store/selector/counter.selector';
+import { COUNTER_SELECTOR_NAME } from 'src/app/store/selector/counter.selector';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from "@angular/core";
@@ -7,7 +7,7 @@ import { CounterOutputComponent } from "./counter-output/counter-output.componen
 import { CounterComponent } from "./counter/counter.component";
 import { CustomCounterInputComponent } from "./custom-counter-input/custom-counter-input.component";
 import { CommonModule } from '@angular/common';
-import { counterReducer } from './store/reducer/counter.reducer';
+import { counterReducer } from 'src/app/store/reducer/counter.reducer';
 import { StoreModule } from '@ngrx/store';
 
 const routes : Routes=[
