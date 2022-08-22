@@ -1,3 +1,4 @@
+import { COUNTER_SELECTOR_NAME } from './store/selector/counter.selector';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from "@angular/core";
@@ -22,7 +23,7 @@ const routes : Routes=[
   imports: [
     CommonModule,
     FormsModule ,
-    StoreModule.forFeature('counter', counterReducer),
+    StoreModule.forFeature(COUNTER_SELECTOR_NAME, counterReducer),
     RouterModule.forChild(routes)]
 })
 export class CounterModule{

@@ -1,3 +1,4 @@
+import { POST_SELECTOR_NAME } from './../counter/store/selector/post.selector';
 import { PostComponent } from './post/post.component';
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
@@ -25,7 +26,7 @@ const routes : Routes=[
   imports:[
     CommonModule,
      ReactiveFormsModule ,
-     StoreModule.forFeature('posts', postReducer),
+     StoreModule.forFeature(POST_SELECTOR_NAME, postReducer),
      RouterModule.forChild(routes)
   ]
 })
